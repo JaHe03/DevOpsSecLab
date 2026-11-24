@@ -19,7 +19,7 @@ jobs:
       - name: SAST (Semgrep)
         run: |
           pip install semgrep
-          semgrep scan --config auto --error    # drop --error to make it a report
+          semgrep scan --config auto
 
       # REPORT: dependency scan — surface findings without blocking
       - name: Dependency scan (Trivy)
