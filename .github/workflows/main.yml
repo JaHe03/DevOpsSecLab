@@ -23,9 +23,10 @@ jobs:
 
       # GATE or REPORT (your choice): SAST
       - name: SAST (Semgrep)
+        if: always()
         run: |
           pip install semgrep
-          semgrep scan --config auto
+          semgrep scan 
 
       # REPORT: dependency scan — surface findings without blocking
 
