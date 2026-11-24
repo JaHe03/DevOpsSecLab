@@ -1,0 +1,11 @@
+
+title = "DevSecOps Lab"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "lab-aws-key"
+description = "Detect fake AWS access keys"
+regex = '''AKIA[A-Z0-9]{16}'''
+keywords = ["AKIA"]
